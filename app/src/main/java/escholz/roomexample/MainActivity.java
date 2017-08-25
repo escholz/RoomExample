@@ -62,8 +62,8 @@ public class MainActivity extends LifecycleActivity
     /**
      * Callback for {@link GetOrCreateDatabaseTask}
      *
-     * @param task
-     * @param database
+     * @param task The task that executed
+     * @param database The constructed database
      */
     @Override
     public void onDatabaseCreated(GetOrCreateDatabaseTask task, RoomDatabase database) {
@@ -76,8 +76,8 @@ public class MainActivity extends LifecycleActivity
     /**
      * Callback for {@link FindAllSessionsTask}
      *
-     * @param task
-     * @param sessions
+     * @param task The task that executed
+     * @param sessions A {@link LiveData} collection of sessions
      */
     @Override
     public void onSessionsAvailable(FindAllSessionsTask task, LiveData<List<Session>> sessions) {
@@ -93,7 +93,7 @@ public class MainActivity extends LifecycleActivity
     /**
      * Callback when selecting {@link SessionViewHolder}
      *
-     * @param viewHolder
+     * @param viewHolder The selected view holder
      */
     @Override
     public void onSessionSelected(SessionViewHolder viewHolder) {
@@ -110,8 +110,8 @@ public class MainActivity extends LifecycleActivity
     /**
      * Callback for {@link CreateSessionTask}
      *
-     * @param task
-     * @param sessionIds
+     * @param task The task that executed
+     * @param sessionIds A session id for each inserted {@link Session}
      */
     @Override
     public void onSessionCreated(CreateSessionTask task, long[] sessionIds) {

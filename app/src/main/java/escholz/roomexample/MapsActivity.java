@@ -70,8 +70,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         } else {
             getLifecycle().addObserver(new LifecycleObserver() {
                 @OnLifecycleEvent(Lifecycle.Event.ON_START)
-                public void onResume() {
-                    // TODO: Make a listener that does both of these things.
+                public void onStart() {
                     getLifecycle().removeObserver(this);
                     loadSession(sessionId);
                 }

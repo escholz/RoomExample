@@ -22,14 +22,6 @@ public class GetOrCreateDatabaseTask extends AsyncTask<Void, Void, RoomDatabase>
     private final String databaseName;
     private final WeakReference<Callback> callbackReference;
 
-    /**
-     * Checks the cache off-thread
-     *
-     * @param context
-     * @param databaseClass
-     * @param databaseName
-     * @param callback
-     */
     public GetOrCreateDatabaseTask(Context context, Class<? extends RoomDatabase> databaseClass,
                                    String databaseName, Callback callback) {
         applicationContext = context.getApplicationContext();
