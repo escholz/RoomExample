@@ -21,10 +21,8 @@ public interface SessionDao {
     @Query("SELECT * FROM session")
     public LiveData<List<Session>> findAll();
 
-    @Query(value = "SELECT session.* FROM session " +
-                   "INNER JOIN step ON step.session_id = session.id " +
-                   "WHERE session.id = :id")
-    public LiveData<Session> findFirstById(int id);
+    @Query(value = "SELECT session.* FROM session WHERE session.id = :id")
+    public LiveData<Session> findFirstById(long id);
 
     @Update(onConflict = ROLLBACK)
     public void update(Session... sessions);

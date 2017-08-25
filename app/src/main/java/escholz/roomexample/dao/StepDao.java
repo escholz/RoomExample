@@ -17,5 +17,5 @@ public interface StepDao {
     public void insert(Step... steps);
 
     @Query(value = "SELECT * FROM step WHERE session_id = :sessionId")
-    public LiveData<List<Step>> findAllBySessionId(int sessionId);
+    public LiveData<List<Step>> findAllBySessionId(long sessionId);
 }
