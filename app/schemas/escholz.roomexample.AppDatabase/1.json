@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "cddcc423d1ddf0bbb22a191e4ec8ff09",
+    "identityHash": "f29f7fcc69248bd8da2ee52dc9c96b80",
     "entities": [
       {
         "tableName": "Session",
@@ -40,7 +40,7 @@
             "columnNames": [
               "name"
             ],
-            "createSql": "CREATE UNIQUE INDEX `index_Session_name`\nON `${TABLE_NAME}` (`name`)"
+            "createSql": "CREATE UNIQUE INDEX `index_Session_name` ON `${TABLE_NAME}` (`name`)"
           }
         ],
         "foreignKeys": []
@@ -94,7 +94,7 @@
               "session_id",
               "created_at"
             ],
-            "createSql": "CREATE  INDEX `index_Step_session_id_created_at`\nON `${TABLE_NAME}` (`session_id`, `created_at`)"
+            "createSql": "CREATE  INDEX `index_Step_session_id_created_at` ON `${TABLE_NAME}` (`session_id`, `created_at`)"
           }
         ],
         "foreignKeys": [
@@ -114,7 +114,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"cddcc423d1ddf0bbb22a191e4ec8ff09\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"f29f7fcc69248bd8da2ee52dc9c96b80\")"
     ]
   }
 }
